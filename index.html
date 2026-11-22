@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="web_standard" name="shell-type"/>
+  <title>Dağhan Tur | Servis Taşımacılığı & Araç Bakım Onarım</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    .focus-ring-brand:focus {
+      outline: none;
+      border-color: #C21F30;
+      box-shadow: 0 0 0 3px rgba(194, 31, 48, 0.15);
+    }
+
+    /* Infinite Continuous Marquee Animation */
+    @keyframes continuousSlide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .animate-marquee-continuous {
+      display: flex;
+      width: max-content;
+      animation: continuousSlide 42s linear infinite;
+      will-change: transform;
+    }
+
+    .marquee-wrapper:hover .animate-marquee-continuous {
+      animation-play-state: paused;
+    }
+
+    .marquee-is-paused .animate-marquee-continuous {
+      animation-play-state: paused !important;
+    }
+
+    /* Hero Slide transitions */
+    .hero-slide {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+      transform: scale(1.03);
+    }
+    .hero-slide.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1);
+    }
+
+    /* Custom smooth scrolling */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "brand-red": "#C21F30",
+            "brand-red-dark": "#A31625",
+            "brand-red-light": "#FDE8EA",
+            "brand-red-soft": "#FFF1F2",
+            "secondary": "#A31625",
+            "secondary-container": "#C21F30",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#7A0F1B",
+            "secondary-fixed": "#FDE8EA",
+            "secondary-fixed-dim": "#F8B4BB",
+            "on-secondary-fixed": "#5C0A13",
+            "on-secondary-fixed-variant": "#8B121F",
+            "tertiary-fixed": "#dbe1ff",
+            "background": "#f8f9ff",
+            "surface-container-highest": "#d3e4fe",
+            "surface-container": "#e5eeff",
+            "tertiary-fixed-dim": "#b4c5ff",
+            "error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#003ea8",
+            "surface-container-high": "#dce9ff",
+            "inverse-surface": "#213145",
+            "on-primary-container": "#7c839b",
+            "primary-container": "#131b2e",
+            "outline-variant": "#c6c6cd",
+            "on-error": "#ffffff",
+            "primary-fixed": "#dae2fd",
+            "on-background": "#0b1c30",
+            "on-surface-variant": "#45464d",
+            "primary-fixed-dim": "#bec6e0",
+            "surface-tint": "#565e74",
+            "surface-variant": "#d3e4fe",
+            "on-error-container": "#93000a",
+            "surface-dim": "#cbdbf5",
+            "tertiary": "#000000",
+            "primary": "#000000",
+            "surface": "#f8f9ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#eff4ff",
+            "on-tertiary-container": "#497cff",
+            "on-tertiary": "#ffffff",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed": "#00174b",
+            "inverse-primary": "#bec6e0",
+            "error": "#ba1a1a",
+            "inverse-on-surface": "#eaf1ff",
+            "on-primary-fixed-variant": "#3f465c",
+            "tertiary-container": "#00174b",
+            "outline": "#76777d",
+            "on-primary-fixed": "#131b2e",
+            "surface-bright": "#f8f9ff",
+            "on-surface": "#0b1c30"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "gutter": "1.5rem",
+            "gutter-sm": "1rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "gutter-lg": "2rem",
+            "margin-lg": "4rem",
+            "space-lg": "1.5rem",
+            "margin-md": "2.5rem",
+            "space-sm": "0.5rem",
+            "margin": "1.5rem",
+            "space-xl": "2.5rem"
+          },
+          fontFamily: {
+            "headline-md": [ "Plus Jakarta Sans" ],
+            "body-lg": [ "Inter" ],
+            "title-md": [ "Plus Jakarta Sans" ],
+            "body-sm": [ "Inter" ],
+            "display-lg": [ "Plus Jakarta Sans" ],
+            "display-lg-mobile": [ "Plus Jakarta Sans" ],
+            "headline-xl": [ "Plus Jakarta Sans" ],
+            "headline-sm": [ "Plus Jakarta Sans" ],
+            "label-md": [ "Plus Jakarta Sans" ],
+            "label-sm": [ "Plus Jakarta Sans" ],
+            "headline-xl-mobile": [ "Plus Jakarta Sans" ],
+            "label-lg": [ "Plus Jakarta Sans" ],
+            "body-md": [ "Inter" ],
+            "headline-lg": [ "Plus Jakarta Sans" ]
+          },
+          fontSize: {
+            "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ],
+            "body-lg": [ "18px", { "lineHeight": "28px", "fontWeight": "400" } ],
+            "title-md": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" } ],
+            "body-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ],
+            "display-lg": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" } ],
+            "display-lg-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" } ],
+            "headline-xl": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700" } ],
+            "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ],
+            "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ],
+            "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" } ],
+            "headline-xl-mobile": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ],
+            "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ],
+            "body-md": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ],
+            "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased selection:bg-[#C21F30] selection:text-white">
+
+  <!-- ==========================================
+       HEADER / NAVBAR
+       ========================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-b border-[#C21F30]/10">
+    <div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6">
+      
+      <!-- Brand Logo (Original SVG from workspace) -->
+      <a class="flex items-center gap-3 shrink-0 group py-1" href="#">
+        <img alt="Dağhan Tur Logo" class="h-9 md:h-11 w-auto object-contain transition-transform group-hover:scale-105 duration-200" src="logo.svg"/>
+        <span class="sr-only">Dağhan Tur</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden xl:flex items-center gap-1 bg-surface-container-lowest/90 px-3 py-1.5 rounded-full shadow-[0_1px_6px_rgba(0,0,0,0.04)] border border-surface-container-high/60" data-active-classes="bg-[#C21F30] text-white font-semibold rounded-full">
+        <a aria-current="page" class="px-4 py-2 transition-colors bg-[#C21F30] text-white font-semibold rounded-full shadow-sm" data-path="ana-sayfa" href="#">Ana Sayfa</a>
+        <a class="px-4 py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-[#C21F30] transition-colors" data-path="hizmetlerimiz" href="#hizmetlerimiz">Hizmetlerimiz</a>
+        <a class="px-4 py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-[#C21F30] transition-colors" data-path="neden-biz" href="#neden-biz">Neden Biz?</a>
+        <a class="px-4 py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-[#C21F30] transition-colors" data-path="filo-ve-atolye" href="#filo-ve-atolye">Filo &amp; Atölye</a>
+        <a class="px-4 py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-[#C21F30] transition-colors" data-path="iletisim" href="#iletisim">İletişim</a>
+      </nav>
+
+      <!-- Quick Actions -->
+      <div class="flex items-center gap-3 shrink-0">
+        <a class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-lowest text-on-surface font-label-lg text-label-lg border border-[#C21F30]/25 hover:border-[#C21F30] hover:text-[#C21F30] transition-all duration-200 shadow-sm" href="tel:05418624880">
+          <span class="material-symbols-outlined text-[18px] text-[#C21F30]">call</span>
+          <span>0541 862 48 80</span>
+        </a>
+        <a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#C21F30] text-white font-label-lg text-label-lg hover:bg-[#A31625] transition-all duration-200 shadow-md shadow-[#C21F30]/25" href="https://wa.me/905418624880" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+          <span>WhatsApp'tan Yaz</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-20 bg-background">
+    <div class="flex flex-col w-full">
+
+      <!-- ==========================================
+             HERO SECTION (Canlı Kayar Görsel Slider)
+             ========================================== -->
+      <section class="relative w-full overflow-hidden bg-gradient-to-b from-surface via-surface-container-low/40 to-surface py-12 lg:py-20">
+        <!-- Ambient decorative aura in Logo Red -->
+        <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[#C21F30]/15 blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-[#C21F30]/10 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            <!-- Left: Value Proposition & CTAs -->
+            <div class="lg:col-span-6 space-y-6">
+              <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C21F30]/10 border border-[#C21F30]/25 text-[#C21F30] font-label-md text-label-md font-semibold">
+                <span class="text-base">★</span>
+                <span>Güvenli Ulaşım &amp; Profesyonel Servis Bir Arada</span>
+              </div>
+              
+              <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface font-extrabold tracking-tight leading-tight">
+                Yolculukta Güven, <span class="text-[#C21F30]">Bakımda Uzmanlık:</span> Dağhan Tur Yanınızda!
+              </h1>
+              
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                Eskişehir ve çevresinde dakik öğrenci ve kurumsal personel servis taşımacılığı; son teknoloji atölyemizde tır, minibüs ve binek araçlar için eksiksiz tamir &amp; periyodik bakım hizmeti sunuyoruz.
+              </p>
+
+              <!-- Buttons -->
+              <div class="flex flex-wrap items-center gap-4 pt-2">
+                <a class="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full bg-[#C21F30] text-white font-label-lg text-label-lg shadow-lg shadow-[#C21F30]/30 hover:bg-[#A31625] hover:shadow-xl transition-all duration-200" href="#teklif-formu">
+                  <span>Hemen Teklif &amp; Bilgi Al</span>
+                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </a>
+                <a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-surface-container-lowest border border-[#C21F30]/20 text-on-surface font-label-lg text-label-lg hover:border-[#C21F30] hover:text-[#C21F30] hover:bg-surface-container-lowest transition-all duration-200 shadow-sm" href="#filo-ve-atolye">
+                  <span>Filo &amp; Atölye Galerisi</span>
+                  <span class="material-symbols-outlined text-[18px]">photo_library</span>
+                </a>
+              </div>
+
+              <!-- Trust Proof Micro-Strip -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6">
+                <div class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm border border-transparent hover:border-[#C21F30]/20 transition-all">
+                  <span class="material-symbols-outlined text-[#C21F30] text-2xl shrink-0">schedule</span>
+                  <span class="font-label-sm text-label-sm text-on-surface font-semibold">%99.8 Zamanında Sefer</span>
+                </div>
+                <div class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm border border-transparent hover:border-[#C21F30]/20 transition-all">
+                  <span class="material-symbols-outlined text-[#C21F30] text-2xl shrink-0">build_circle</span>
+                  <span class="font-label-sm text-label-sm text-on-surface font-semibold">Sertifikalı Uzman Kadro</span>
+                </div>
+                <div class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm border border-transparent hover:border-[#C21F30]/20 transition-all">
+                  <span class="material-symbols-outlined text-[#C21F30] text-2xl shrink-0">location_searching</span>
+                  <span class="font-label-sm text-label-sm text-on-surface font-semibold">7/24 Canlı GPS Takibi</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Interactive Hero Image Slider (Sürekli Dönen Canlı Karşılama) -->
+            <div class="lg:col-span-6 relative">
+              <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-surface-container border-2 border-white/60 h-[460px] lg:h-[540px] group" id="heroSliderContainer">
+                
+                <!-- Slide 1: Ana Filo -->
+                <div class="hero-slide active absolute inset-0">
+                  <img alt="Dağhan Turizm Modern Servis Filosu" class="w-full h-full object-cover" src="filo-1.jpg"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-primary-container/85 via-transparent to-black/20 pointer-events-none"></div>
+                  <div class="absolute bottom-6 left-6 right-6 z-10 hidden sm:block">
+                    <span class="px-3 py-1 rounded-full bg-[#C21F30] text-white text-label-sm font-semibold inline-block mb-1.5 shadow-sm">Servis Filomuz</span>
+                    <p class="text-white font-title-md font-bold drop-shadow">Eskişehir Merkez Kampüs &amp; Geniş Araç Filosu</p>
+                  </div>
+                </div>
+
+                <!-- Slide 2: Modern Atölye -->
+                <div class="hero-slide absolute inset-0">
+                  <img alt="Dağhan Turizm Yüksek Teknolojili Bakım Atölyesi" class="w-full h-full object-cover" src="atolye-1.jpg"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-primary-container/85 via-transparent to-black/20 pointer-events-none"></div>
+                  <div class="absolute bottom-6 left-6 right-6 z-10 hidden sm:block">
+                    <span class="px-3 py-1 rounded-full bg-[#131b2e] border border-white/30 text-white text-label-sm font-semibold inline-block mb-1.5 shadow-sm">Bakım Atölyemiz</span>
+                    <p class="text-white font-title-md font-bold drop-shadow">Ağır Vasıta, Tır &amp; Minibüs Hidrolik Lift İstasyonları</p>
+                  </div>
+                </div>
+
+                <!-- Slide 3: Konvoy -->
+                <div class="hero-slide absolute inset-0">
+                  <img alt="Dağhan Tur Servis Konvoyu" class="w-full h-full object-cover" src="filo-2.jpg"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-primary-container/85 via-transparent to-black/20 pointer-events-none"></div>
+                  <div class="absolute bottom-6 left-6 right-6 z-10 hidden sm:block">
+                    <span class="px-3 py-1 rounded-full bg-[#C21F30] text-white text-label-sm font-semibold inline-block mb-1.5 shadow-sm">Taşımacılık</span>
+                    <p class="text-white font-title-md font-bold drop-shadow">Organize Sanayi &amp; Kurumsal Güzergah Ağı</p>
+                  </div>
+                </div>
+
+                <!-- Slide 4: Mekanik Bakım -->
+                <div class="hero-slide absolute inset-0">
+                  <img alt="Dağhan Tur Motor Mekanik Tamiri" class="w-full h-full object-cover" src="atolye-2.jpg"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-primary-container/85 via-transparent to-black/20 pointer-events-none"></div>
+                  <div class="absolute bottom-6 left-6 right-6 z-10 hidden sm:block">
+                    <span class="px-3 py-1 rounded-full bg-[#131b2e] border border-white/30 text-white text-label-sm font-semibold inline-block mb-1.5 shadow-sm">Teknik Uzmanlık</span>
+                    <p class="text-white font-title-md font-bold drop-shadow">Bilgisayarlı Diagnostik &amp; Motor Revizyonu</p>
+                  </div>
+                </div>
+
+                <!-- Slide 5: Minibüs Filosu -->
+                <div class="hero-slide absolute inset-0">
+                  <img alt="Dağhan Tur Minibüs Filosu" class="w-full h-full object-cover" src="filo-3.jpg"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-primary-container/85 via-transparent to-black/20 pointer-events-none"></div>
+                  <div class="absolute bottom-6 left-6 right-6 z-10 hidden sm:block">
+                    <span class="px-3 py-1 rounded-full bg-[#C21F30] text-white text-label-sm font-semibold inline-block mb-1.5 shadow-sm">Özmal Filo</span>
+                    <p class="text-white font-title-md font-bold drop-shadow">Her Güzergaha Uygun Modern Minibüsler</p>
+                  </div>
+                </div>
+
+                <!-- Floating Pill 1: Top Right -->
+                <div class="absolute top-6 right-6 z-20 flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-surface-container-lowest/95 backdrop-blur-md shadow-lg text-on-surface border border-[#C21F30]/20">
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#C21F30] animate-pulse"></span>
+                  <span class="font-label-lg text-label-lg font-bold">20+ Yıllık Tecrübe</span>
+                </div>
+                
+                <!-- Floating Pill 2: Bottom Left -->
+                <div class="absolute bottom-6 left-6 z-20 flex items-center gap-3 px-5 py-3 rounded-2xl bg-surface-container-lowest/95 backdrop-blur-md shadow-xl text-on-surface border border-white/50">
+                  <div class="w-10 h-10 rounded-xl bg-[#C21F30]/15 flex items-center justify-center text-[#C21F30]">
+                    <span class="material-symbols-outlined text-[22px]">directions_bus</span>
+                  </div>
+                  <div>
+                    <p class="font-headline-sm text-headline-sm font-extrabold leading-none text-[#C21F30]">50+</p>
+                    <p class="font-label-sm text-label-sm text-on-surface-variant font-medium">Özmal Araç Filosu</p>
+                  </div>
+                </div>
+
+                <!-- Slider Navigation Dots (Clickable) -->
+                <div class="absolute bottom-6 right-6 z-20 flex items-center gap-1.5 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full" id="heroSliderDots">
+                  <button class="w-2.5 h-2.5 rounded-full bg-[#C21F30] transition-all duration-300 dot active" data-index="0" type="button"></button>
+                  <button class="w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition-all duration-300 dot" data-index="1" type="button"></button>
+                  <button class="w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition-all duration-300 dot" data-index="2" type="button"></button>
+                  <button class="w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition-all duration-300 dot" data-index="3" type="button"></button>
+                  <button class="w-2.5 h-2.5 rounded-full bg-white/60 hover:bg-white transition-all duration-300 dot" data-index="4" type="button"></button>
+                </div>
+
+                <!-- Manual Arrow Buttons -->
+                <button class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/30 hover:bg-[#C21F30] text-white flex items-center justify-center backdrop-blur-md transition-all duration-200 opacity-0 group-hover:opacity-100" id="heroPrevBtn" type="button">
+                  <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+                </button>
+                <button class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/30 hover:bg-[#C21F30] text-white flex items-center justify-center backdrop-blur-md transition-all duration-200 opacity-0 group-hover:opacity-100" id="heroNextBtn" type="button">
+                  <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+                </button>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+             DUAL-SERVICE SHOWCASE
+             ========================================== -->
+      <section class="w-full py-16 lg:py-24 bg-surface-container-low/50" id="hizmetlerimiz">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          
+          <!-- Section Heading -->
+          <div class="max-w-3xl mb-12 lg:mb-16">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#C21F30]/10 border border-[#C21F30]/20 text-[#C21F30] font-label-sm text-label-sm font-semibold mb-3">
+              <span>UZMANLIK ALANLARIMIZ</span>
+            </div>
+            <h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface font-bold tracking-tight">
+              İhtiyacınıza Özel Çifte Çözüm
+            </h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mt-2">
+              Taşımacılıkta konfor ve emniyet, araç bakımında sanayi tecrübesi ile Eskişehir'in güvenilir markası.
+            </p>
+          </div>
+
+          <!-- Two Distinct Bento Service Cards -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+            
+            <!-- Card 1: Servis Taşımacılığı -->
+            <div class="group relative rounded-3xl bg-surface-container-lowest p-8 lg:p-10 shadow-sm hover:shadow-xl border border-transparent hover:border-[#C21F30]/30 transition-all duration-300 flex flex-col justify-between">
+              <div class="space-y-6">
+                
+                <!-- Service Card Photo Banner -->
+                <div class="relative h-48 rounded-2xl overflow-hidden shadow-inner">
+                  <img alt="Dağhan Tur Öğrenci ve Personel Servisleri" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="filo-3.jpg"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                  <div class="absolute top-3 left-3">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C21F30] text-white font-label-sm text-label-sm font-bold shadow-sm">
+                      <span>🚌</span> Ulaşım Çözümleri
+                    </span>
+                  </div>
+                  <div class="absolute bottom-3 left-4 text-white">
+                    <p class="font-title-md font-bold text-white leading-tight">Konforlu &amp; Dakik Filo</p>
+                  </div>
+                </div>
+
+                <h3 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight group-hover:text-[#C21F30] transition-colors">
+                  Okul &amp; Personel Servis Taşımacılığı
+                </h3>
+                
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Öğrencileriniz ve çalışanlarınız için yüksek güvenlik standartlarında, klimalı, emniyet kemerli ve GPS ile canlı takip edilebilir modern filo.
+                </p>
+
+                <ul class="space-y-3.5 pt-2">
+                  <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-[#C21F30] text-[20px] shrink-0 mt-0.5">check_circle</span>
+                    <span class="font-body-sm text-body-sm text-on-surface font-medium">Öğrenci &amp; Okul Servisleri (Rehber personelli, can güvenliği öncelikli)</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-[#C21F30] text-[20px] shrink-0 mt-0.5">check_circle</span>
+                    <span class="font-body-sm text-body-sm text-on-surface font-medium">Fabrika &amp; Kurumsal Şirket Personel Servis Ağı</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-[#C21F30] text-[20px] shrink-0 mt-0.5">check_circle</span>
+                    <span class="font-body-sm text-body-sm text-on-surface font-medium">VIP Transfer &amp; Şehirlerarası Özel Organizasyon</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-[#C21F30] text-[20px] shrink-0 mt-0.5">check_circle</span>
+                    <span class="font-body-sm text-body-sm text-on-surface font-medium">Canlı Araç Konum &amp; Güzergah Takip Sistemi</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-[#C21F30] text-[20px] shrink-0 mt-0.5">check_circle</span>
+                    <span class="font-body-sm text-body-sm text-on-surface font-medium">Düzenli Sağlık &amp; Psikoteknik Kontrollü Kaptanlar</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="pt-8">
+                <a class="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-[#C21F30] text-white font-label-lg text-label-lg font-bold hover:bg-[#A31625] transition-colors shadow-md shadow-[#C21F30]/20" href="#teklif-formu" onclick="document.getElementById('serviceType').value='personel';">
+                  <span>Servis Güzergah &amp; Fiyat Teklifi Al</span>
+                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2: Oto Bakım & Ağır Vasıta -->
+            <div class="group relative rounded-3xl bg-surface-container-lowest p-8 lg:p-10 shadow-sm hover:shadow-xl border border-transparent hover:border-[#C21F30]/30 transition-all duration-300 flex flex-col justify-between">
+              <div class="space-y-6">
+                
+                <!-- Service Card Photo Banner -->
+                <div class="relative h-48 rounded-2xl overflow-hidden shadow-inner">
+                  <img alt="Dağhan Turizm Bakım ve Onarım Atölyesi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="atolye-1.jpg"/>
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                  <div class="absolute top-3 left-3">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#131b2e] border border-white/20 text-white font-label-sm text-label-sm font-semibold shadow-sm">
+                      <span>⚙️</span> Yetkili Kalitesinde Özel Servis
+                    </span>
+                  </div>
+                  <div class="absolute bottom-3 left-4 text-white">
+                    <p class="font-title-md font-bold text-white leading-tight">Teknik Donanım &amp; Liftler</p>
+                  </div>
+                </div>
+
+                <h3 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight group-hover:text-[#C21F30] transition-colors">
+                  Tır, Servis Aracı &amp; Otomobil Tamiri
+                </h3>
+                
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  Geniş atölye kapasitemiz ve bilgisayarlı arıza tespit cihazlarımızla hafif ticari, otobüs, tır (çekici/dorse) ve binek araçlarınıza garantili onarım.
+                </p>
+
+                <ul class="space-y-3.5 pt-2">
+                  <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-[#C21F30] text-[20px] shrink-0 mt-0.5">verified</span>
+                    <span class="font-body-sm text-body-sm text-on-surface font-medium">Ağır Vasıta &amp; Tır (Çekici) Mekanik / Motor Revizyonu</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-[#C21F30] text-[20px] shrink-0 mt-0.5">verified</span>
+                    <span class="font-body-sm text-body-sm text-on-surface font-medium">Okul ve Personel Minibüsleri Periyodik Bakımı</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-[#C21F30] text-[20px] shrink-0 mt-0.5">verified</span>
+                    <span class="font-body-sm text-body-sm text-on-surface font-medium">Bilgisayarlı Elektronik Beyin &amp; Arıza Tespiti</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-[#C21F30] text-[20px] shrink-0 mt-0.5">verified</span>
+                    <span class="font-body-sm text-body-sm text-on-surface font-medium">Fren Testi, Alt Takım, Makas &amp; Süspansiyon Bakımı</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-[#C21F30] text-[20px] shrink-0 mt-0.5">verified</span>
+                    <span class="font-body-sm text-body-sm text-on-surface font-medium">Şeffaf Fiyatlandırma &amp; Orijinal Yedek Parça Güvencesi</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="pt-8">
+                <a class="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-primary-container text-on-primary font-label-lg text-label-lg font-bold hover:bg-[#C21F30] transition-colors shadow-sm" href="#teklif-formu" onclick="document.getElementById('serviceType').value='tir';">
+                  <span>Atölye Randevusu / Fiyat Al</span>
+                  <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+             WHY CHOOSE US (Bento Grid)
+             ========================================== -->
+      <section class="w-full py-16 lg:py-24 bg-surface" id="neden-biz">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          
+          <div class="text-center max-w-2xl mx-auto mb-14">
+            <span class="font-label-md text-label-md text-[#C21F30] font-bold tracking-wider uppercase">KURUMSAL DEĞERLERİMİZ</span>
+            <h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface font-bold tracking-tight mt-2">
+              Neden Dağhan Tur'u Tercih Etmelisiniz?
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mt-3">
+              Filo yönetiminden mekanik desteğe kadar kesintisiz, güvenilir ve sürdürülebilir iş ortaklığı.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Feature 1 -->
+            <div class="p-8 rounded-3xl bg-surface-container-lowest shadow-sm hover:shadow-md border-t-2 border-transparent hover:border-[#C21F30] transition-all duration-200 flex flex-col justify-between">
+              <div>
+                <div class="w-14 h-14 rounded-2xl bg-[#C21F30]/10 flex items-center justify-center text-[#C21F30] mb-6">
+                  <span class="material-symbols-outlined text-3xl">timer</span>
+                </div>
+                <h3 class="font-title-md text-title-md text-on-surface font-bold mb-3">
+                  Tam Zamanında ve Güvenli Ulaşım
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Güzergah optimizasyonu ve tecrübeli şoförlerimizle vardiya ve ders zili asla kaçmaz.
+                </p>
+              </div>
+              <div class="pt-6 font-label-sm text-label-sm text-[#C21F30] font-semibold">
+                0 Gecikme Prensibi →
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="p-8 rounded-3xl bg-surface-container-lowest shadow-sm hover:shadow-md border-t-2 border-transparent hover:border-[#C21F30] transition-all duration-200 flex flex-col justify-between">
+              <div>
+                <div class="w-14 h-14 rounded-2xl bg-[#C21F30]/10 flex items-center justify-center text-[#C21F30] mb-6">
+                  <span class="material-symbols-outlined text-3xl">local_shipping</span>
+                </div>
+                <h3 class="font-title-md text-title-md text-on-surface font-bold mb-3">
+                  Ağır Vasıta &amp; Ticari Araç Uzmanlığı
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Yüksek tonajlı tırlardan filo minibüslerine kadar ağır sanayi tecrübesi ve donanımı.
+                </p>
+              </div>
+              <div class="pt-6 font-label-sm text-label-sm text-[#C21F30] font-semibold">
+                Ağır Sanayi Donanımı →
+              </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="p-8 rounded-3xl bg-surface-container-lowest shadow-sm hover:shadow-md border-t-2 border-transparent hover:border-[#C21F30] transition-all duration-200 flex flex-col justify-between">
+              <div>
+                <div class="w-14 h-14 rounded-2xl bg-[#C21F30]/10 flex items-center justify-center text-[#C21F30] mb-6">
+                  <span class="material-symbols-outlined text-3xl">price_check</span>
+                </div>
+                <h3 class="font-title-md text-title-md text-on-surface font-bold mb-3">
+                  Şeffaf Fiyat &amp; Dürüst İşçilik
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Sürpriz faturalar yok; onayınız olmadan hiçbir parça değişimi yapılmaz, dürüst esnaflık anlayışı.
+                </p>
+              </div>
+              <div class="pt-6 font-label-sm text-label-sm text-[#C21F30] font-semibold">
+                Onaylı İş Listesi →
+              </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="p-8 rounded-3xl bg-surface-container-lowest shadow-sm hover:shadow-md border-t-2 border-transparent hover:border-[#C21F30] transition-all duration-200 flex flex-col justify-between">
+              <div>
+                <div class="w-14 h-14 rounded-2xl bg-[#C21F30]/10 flex items-center justify-center text-[#C21F30] mb-6">
+                  <span class="material-symbols-outlined text-3xl">hub</span>
+                </div>
+                <h3 class="font-title-md text-title-md text-on-surface font-bold mb-3">
+                  Tek Noktada Çifte Çözüm
+                </h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  Hem taşıma filonuzu emanet edin, hem kurumsal şirket araçlarınızın bakımını tek merkezden yönetin.
+                </p>
+              </div>
+              <div class="pt-6 font-label-sm text-label-sm text-[#C21F30] font-semibold">
+                Entegre Yönetim →
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+             SÜREKLİ DÖNEN KAYAR GÖRSEL GALERİSİ (Infinite Marquee)
+             ========================================== -->
+      <section class="w-full py-16 lg:py-24 bg-surface-container-low/40 overflow-hidden" id="filo-ve-atolye">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 mb-10">
+          
+          <!-- Top Bar: Title, Filters & Controls -->
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#C21F30]/10 border border-[#C21F30]/20 text-[#C21F30] font-label-sm text-label-sm font-semibold mb-2">
+                <span class="w-2 h-2 rounded-full bg-[#C21F30] animate-ping"></span>
+                <span>CANLI GÖRSEL TURU</span>
+              </div>
+              <h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface font-bold tracking-tight">
+                Filomuz ve Bakım Atölyemiz
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl">
+                Gerçek araçlarımız, servis konvoylarımız ve son teknoloji donanımlı atölyemizden canlı kareler. Kayan görsellerin üzerine gelerek durdurabilir ve tıklayarak büyütebilirsiniz.
+              </p>
+            </div>
+            
+            <!-- Controls & Category Filters -->
+            <div class="flex flex-wrap items-center gap-3">
+              <!-- Filter Buttons -->
+              <div class="flex items-center gap-1.5 p-1 rounded-full bg-surface-container-lowest shadow-sm border border-surface-container-high" id="galleryFilters">
+                <button class="px-4 py-2 rounded-full bg-[#C21F30] text-white font-label-md text-label-md font-semibold transition-all shadow-sm filter-btn active" data-filter="all" type="button">
+                  Tümü (11)
+                </button>
+                <button class="px-4 py-2 rounded-full text-on-surface-variant hover:text-[#C21F30] font-label-md text-label-md font-medium transition-all filter-btn" data-filter="servis" type="button">
+                  Servis Filosu (7)
+                </button>
+                <button class="px-4 py-2 rounded-full text-on-surface-variant hover:text-[#C21F30] font-label-md text-label-md font-medium transition-all filter-btn" data-filter="atolye" type="button">
+                  Bakım Atölyesi (4)
+                </button>
+              </div>
+
+              <!-- Pause / Play & Manual Navigation Buttons -->
+              <div class="flex items-center gap-2">
+                <button aria-label="Kaydırmayı Durdur / Başlat" class="w-10 h-10 rounded-full bg-surface-container-lowest border border-surface-container-high hover:border-[#C21F30] hover:text-[#C21F30] text-on-surface flex items-center justify-center transition-all shadow-sm" id="marqueePauseToggle" title="Durdur / Oynat" type="button">
+                  <span class="material-symbols-outlined text-[20px]" id="marqueePauseIcon">pause</span>
+                </button>
+                <button aria-label="Sola Kaydır" class="w-10 h-10 rounded-full bg-surface-container-lowest border border-surface-container-high hover:border-[#C21F30] hover:text-[#C21F30] text-on-surface flex items-center justify-center transition-all shadow-sm" id="marqueeStepLeft" title="Sola İlerlet" type="button">
+                  <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+                </button>
+                <button aria-label="Sağa Kaydır" class="w-10 h-10 rounded-full bg-surface-container-lowest border border-surface-container-high hover:border-[#C21F30] hover:text-[#C21F30] text-on-surface flex items-center justify-center transition-all shadow-sm" id="marqueeStepRight" title="Sağa İlerlet" type="button">
+                  <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Infinite Continuous Marquee Container -->
+        <div class="relative w-full marquee-wrapper cursor-grab active:cursor-grabbing overflow-hidden py-3" id="marqueeContainer">
+          
+          <!-- Subtle Gradient Masks for Edge Softening -->
+          <div class="absolute left-0 top-0 bottom-0 w-16 lg:w-32 bg-gradient-to-r from-background via-background/70 to-transparent z-10 pointer-events-none"></div>
+          <div class="absolute right-0 top-0 bottom-0 w-16 lg:w-32 bg-gradient-to-l from-background via-background/70 to-transparent z-10 pointer-events-none"></div>
+
+          <!-- The Continuous Moving Track -->
+          <div class="animate-marquee-continuous gap-6 px-4" id="marqueeTrack">
+            
+            <!-- ====== SET 1 (11 CARDS) ====== -->
+
+            <!-- Card 1: Filo Ana Görünüm -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="servis" data-desc="Modern otobüs ve servis araçlarından oluşan kurumsal filomuz" data-full="filo-1.jpg" data-title="Dağhan Turizm Merkez Kampüs ve Geniş Servis Filosu">
+              <img alt="Dağhan Turizm Kampüs ve Servis Filosu" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="filo-1.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C21F30] text-white text-label-sm font-semibold shadow-md">
+                  <span>🚌</span> Servis Filosu
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Dağhan Turizm Merkez Kampüs ve Geniş Servis Filosu</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Eskişehir ve bölgesi personel &amp; öğrenci taşımacılığı</p>
+              </div>
+            </div>
+
+            <!-- Card 2: Modern Atölye -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="atolye" data-desc="Tır, dorse ve servis araçları için hidrolik liftli servis istasyonları" data-full="atolye-1.jpg" data-title="Yüksek Kapasiteli Modern Servis & Bakım Atölyemiz">
+              <img alt="Dağhan Turizm Bakım ve Onarım Atölyesi" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="atolye-1.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#131b2e] border border-white/20 text-white text-label-sm font-semibold shadow-md">
+                  <span>⚙️</span> Bakım Atölyesi
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Yüksek Kapasiteli Modern Servis &amp; Bakım Atölyemiz</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Hidrolik liftler, tır ve ağır vasıta servis kanalları</p>
+              </div>
+            </div>
+
+            <!-- Card 3: Konvoy -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="servis" data-desc="Eskişehir sanayi ve kurumlarına dakik ve kesintisiz transfer hizmeti" data-full="filo-2.jpg" data-title="Bölgesel Personel & Öğrenci Taşıma Konvoyu">
+              <img alt="Dağhan Tur Servis Konvoyu" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="filo-2.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C21F30] text-white text-label-sm font-semibold shadow-md">
+                  <span>🚌</span> Servis Filosu
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Bölgesel Personel &amp; Öğrenci Taşıma Konvoyu</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Geniş araç kapasitesiyle toplu taşıma operasyonları</p>
+              </div>
+            </div>
+
+            <!-- Card 4: Mekanik & Motor -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="atolye" data-desc="Sertifikalı ustalarımızla garantili parça ve mekanik onarım" data-full="atolye-2.jpg" data-title="Uzman Kadro ile Motor & Mekanik Revizyonu">
+              <img alt="Dağhan Tur Motor Tamir ve Bakım" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="atolye-2.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#131b2e] border border-white/20 text-white text-label-sm font-semibold shadow-md">
+                  <span>⚙️</span> Bakım Atölyesi
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Uzman Kadro ile Motor &amp; Mekanik Revizyonu</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Eksiksiz periyodik bakım ve orijinal yedek parça</p>
+              </div>
+            </div>
+
+            <!-- Card 5: Minibüs Filosu -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="servis" data-desc="Yüksek güvenlik ve konfor donanımlı Dağhan Tur servis araçları" data-full="filo-3.jpg" data-title="Modern Minibüs Filomuz Hizmete Hazır">
+              <img alt="Dağhan Tur Minibüs Servis Filosu" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="filo-3.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C21F30] text-white text-label-sm font-semibold shadow-md">
+                  <span>🚌</span> Servis Filosu
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Modern Minibüs Filomuz Hizmete Hazır</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Her vardiyaya ve rota ihtiyacına uygun araçlar</p>
+              </div>
+            </div>
+
+            <!-- Card 6: Fren ve Tork Testi -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="atolye" data-desc="Dijital ölçüm cihazlarıyla milimetrik fren ve süspansiyon ayarı" data-full="atolye-3.jpg" data-title="Ağır Vasıta Fren Test ve Tork Kalibrasyonu">
+              <img alt="Dağhan Tur Fren ve Süspansiyon Bakımı" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="atolye-3.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#131b2e] border border-white/20 text-white text-label-sm font-semibold shadow-md">
+                  <span>⚙️</span> Bakım Atölyesi
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Ağır Vasıta Fren Test ve Tork Kalibrasyonu</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Yüksek tonajlı araçlar için hassas güvenlik ayarları</p>
+              </div>
+            </div>
+
+            <!-- Card 7: Öğrenci Servisi -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="servis" data-desc="Rehber personel eşliğinde emniyet kemerli okul taşımacılığı" data-full="filo-4.jpg" data-title="Dakik ve Güvenli Öğrenci Taşımacılığı">
+              <img alt="Dağhan Tur Öğrenci Servisi Minibüsleri" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="filo-4.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C21F30] text-white text-label-sm font-semibold shadow-md">
+                  <span>🚌</span> Servis Filosu
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Dakik ve Güvenli Öğrenci Taşımacılığı</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Veliler için huzurlu ve emniyetli okul yolculuğu</p>
+              </div>
+            </div>
+
+            <!-- Card 8: OBD Beyin Testi -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="atolye" data-desc="En güncel diagnostik cihazlarla noktasal arıza tespiti ve sıfırlama" data-full="atolye-4.jpg" data-title="Bilgisayarlı OBD / ECU Elektronik Beyin Tespiti">
+              <img alt="Dağhan Tur Bilgisayarlı Diagnostik" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="atolye-4.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#131b2e] border border-white/20 text-white text-label-sm font-semibold shadow-md">
+                  <span>⚙️</span> Bakım Atölyesi
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Bilgisayarlı OBD / ECU Elektronik Beyin Tespiti</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Arıza lambaları ve sensör testleri anında tespit</p>
+              </div>
+            </div>
+
+            <!-- Card 9: Şirket Servisleri -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="servis" data-desc="Vardiya saatlerine %99.8 uyum ve düzenli dezenfekte edilen kabinler" data-full="filo-5.jpg" data-title="Eskişehir Fabrika & Kurumsal Şirket Servis Ağı">
+              <img alt="Dağhan Tur Personel Servisleri" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="filo-5.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C21F30] text-white text-label-sm font-semibold shadow-md">
+                  <span>🚌</span> Servis Filosu
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Eskişehir Fabrika &amp; Kurumsal Şirket Servis Ağı</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Zamanında ve konforlu işe gidiş-dönüş garantisi</p>
+              </div>
+            </div>
+
+            <!-- Card 10: Canlı GPS -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="servis" data-desc="Hız ve rota takipli, klimalı ve ferah yolculuk standartları" data-full="filo-6.jpg" data-title="7/24 GPS ile Canlı İzlenebilir Servis Araçları">
+              <img alt="Dağhan Tur Canlı Konum Takipli Minibüsler" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="filo-6.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C21F30] text-white text-label-sm font-semibold shadow-md">
+                  <span>🚌</span> Servis Filosu
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">7/24 GPS ile Canlı İzlenebilir Servis Araçları</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Veliler ve şirket yönetimleri için anlık takip imkânı</p>
+              </div>
+            </div>
+
+            <!-- Card 11: Okul Taşıtı -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="servis" data-desc="Dur lambalı, acil çıkışlı ve çocuk güvenliği sertifikalı araçlar" data-full="filo-7.jpg" data-title="Mevzuata Tam Uyumlu 'Okul Taşıtı' Standartları">
+              <img alt="Dağhan Tur Okul Taşıtı Minibüsleri" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="filo-7.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C21F30] text-white text-label-sm font-semibold shadow-md">
+                  <span>🚌</span> Servis Filosu
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Mevzuata Tam Uyumlu 'Okul Taşıtı' Standartları</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Trafik kuralları ve bakanlık yönergelerine eksiksiz uyum</p>
+              </div>
+            </div>
+
+            <!-- ====== SET 2 (DUPLICATE FOR SEAMLESS INFINITE LOOP) ====== -->
+
+            <!-- Duplicate Card 1 -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="servis" data-desc="Modern otobüs ve servis araçlarından oluşan kurumsal filomuz" data-full="filo-1.jpg" data-title="Dağhan Turizm Merkez Kampüs ve Geniş Servis Filosu">
+              <img alt="Dağhan Turizm Kampüs ve Servis Filosu" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="filo-1.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C21F30] text-white text-label-sm font-semibold shadow-md">
+                  <span>🚌</span> Servis Filosu
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Dağhan Turizm Merkez Kampüs ve Geniş Servis Filosu</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Eskişehir ve bölgesi personel &amp; öğrenci taşımacılığı</p>
+              </div>
+            </div>
+
+            <!-- Duplicate Card 2 -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="atolye" data-desc="Tır, dorse ve servis araçları için hidrolik liftli servis istasyonları" data-full="atolye-1.jpg" data-title="Yüksek Kapasiteli Modern Servis & Bakım Atölyemiz">
+              <img alt="Dağhan Turizm Bakım ve Onarım Atölyesi" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="atolye-1.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#131b2e] border border-white/20 text-white text-label-sm font-semibold shadow-md">
+                  <span>⚙️</span> Bakım Atölyesi
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Yüksek Kapasiteli Modern Servis &amp; Bakım Atölyemiz</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Hidrolik liftler, tır ve ağır vasıta servis kanalları</p>
+              </div>
+            </div>
+
+            <!-- Duplicate Card 3 -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="servis" data-desc="Eskişehir sanayi ve kurumlarına dakik ve kesintisiz transfer hizmeti" data-full="filo-2.jpg" data-title="Bölgesel Personel & Öğrenci Taşıma Konvoyu">
+              <img alt="Dağhan Tur Servis Konvoyu" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="filo-2.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C21F30] text-white text-label-sm font-semibold shadow-md">
+                  <span>🚌</span> Servis Filosu
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Bölgesel Personel &amp; Öğrenci Taşıma Konvoyu</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Geniş araç kapasitesiyle toplu taşıma operasyonları</p>
+              </div>
+            </div>
+
+            <!-- Duplicate Card 4 -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="atolye" data-desc="Sertifikalı ustalarımızla garantili parça ve mekanik onarım" data-full="atolye-2.jpg" data-title="Uzman Kadro ile Motor & Mekanik Revizyonu">
+              <img alt="Dağhan Tur Motor Tamir ve Bakım" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="atolye-2.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#131b2e] border border-white/20 text-white text-label-sm font-semibold shadow-md">
+                  <span>⚙️</span> Bakım Atölyesi
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Uzman Kadro ile Motor &amp; Mekanik Revizyonu</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Eksiksiz periyodik bakım ve orijinal yedek parça</p>
+              </div>
+            </div>
+
+            <!-- Duplicate Card 5 -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="servis" data-desc="Yüksek güvenlik ve konfor donanımlı Dağhan Tur servis araçları" data-full="filo-3.jpg" data-title="Modern Minibüs Filomuz Hizmete Hazır">
+              <img alt="Dağhan Tur Minibüs Servis Filosu" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="filo-3.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C21F30] text-white text-label-sm font-semibold shadow-md">
+                  <span>🚌</span> Servis Filosu
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Modern Minibüs Filomuz Hizmete Hazır</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Her vardiyaya ve rota ihtiyacına uygun araçlar</p>
+              </div>
+            </div>
+
+            <!-- Duplicate Card 6 -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="atolye" data-desc="Dijital ölçüm cihazlarıyla milimetrik fren ve süspansiyon ayarı" data-full="atolye-3.jpg" data-title="Ağır Vasıta Fren Test ve Tork Kalibrasyonu">
+              <img alt="Dağhan Tur Fren ve Süspansiyon Bakımı" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="atolye-3.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#131b2e] border border-white/20 text-white text-label-sm font-semibold shadow-md">
+                  <span>⚙️</span> Bakım Atölyesi
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Ağır Vasıta Fren Test ve Tork Kalibrasyonu</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Yüksek tonajlı araçlar için hassas güvenlik ayarları</p>
+              </div>
+            </div>
+
+            <!-- Duplicate Card 7 -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="servis" data-desc="Rehber personel eşliğinde emniyet kemerli okul taşımacılığı" data-full="filo-4.jpg" data-title="Dakik ve Güvenli Öğrenci Taşımacılığı">
+              <img alt="Dağhan Tur Öğrenci Servisi Minibüsleri" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="filo-4.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C21F30] text-white text-label-sm font-semibold shadow-md">
+                  <span>🚌</span> Servis Filosu
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Dakik ve Güvenli Öğrenci Taşımacılığı</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Veliler için huzurlu ve emniyetli okul yolculuğu</p>
+              </div>
+            </div>
+
+            <!-- Duplicate Card 8 -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="atolye" data-desc="En güncel diagnostik cihazlarla noktasal arıza tespiti ve sıfırlama" data-full="atolye-4.jpg" data-title="Bilgisayarlı OBD / ECU Elektronik Beyin Tespiti">
+              <img alt="Dağhan Tur Bilgisayarlı Diagnostik" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="atolye-4.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#131b2e] border border-white/20 text-white text-label-sm font-semibold shadow-md">
+                  <span>⚙️</span> Bakım Atölyesi
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Bilgisayarlı OBD / ECU Elektronik Beyin Tespiti</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Arıza lambaları ve sensör testleri anında tespit</p>
+              </div>
+            </div>
+
+            <!-- Duplicate Card 9 -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="servis" data-desc="Vardiya saatlerine %99.8 uyum ve düzenli dezenfekte edilen kabinler" data-full="filo-5.jpg" data-title="Eskişehir Fabrika & Kurumsal Şirket Servis Ağı">
+              <img alt="Dağhan Tur Personel Servisleri" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="filo-5.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C21F30] text-white text-label-sm font-semibold shadow-md">
+                  <span>🚌</span> Servis Filosu
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Eskişehir Fabrika &amp; Kurumsal Şirket Servis Ağı</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Zamanında ve konforlu işe gidiş-dönüş garantisi</p>
+              </div>
+            </div>
+
+            <!-- Duplicate Card 10 -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="servis" data-desc="Hız ve rota takipli, klimalı ve ferah yolculuk standartları" data-full="filo-6.jpg" data-title="7/24 GPS ile Canlı İzlenebilir Servis Araçları">
+              <img alt="Dağhan Tur Canlı Konum Takipli Minibüsler" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="filo-6.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C21F30] text-white text-label-sm font-semibold shadow-md">
+                  <span>🚌</span> Servis Filosu
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">7/24 GPS ile Canlı İzlenebilir Servis Araçları</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Veliler ve şirket yönetimleri için anlık takip imkânı</p>
+              </div>
+            </div>
+
+            <!-- Duplicate Card 11 -->
+            <div class="marquee-card group relative w-[320px] sm:w-[380px] lg:w-[420px] h-[280px] sm:h-[320px] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 shrink-0 bg-surface-container border border-surface-container-high cursor-pointer" data-category="servis" data-desc="Dur lambalı, acil çıkışlı ve çocuk güvenliği sertifikalı araçlar" data-full="filo-7.jpg" data-title="Mevzuata Tam Uyumlu 'Okul Taşıtı' Standartları">
+              <img alt="Dağhan Tur Okul Taşıtı Minibüsleri" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" src="filo-7.jpg"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent transition-opacity group-hover:from-black/90"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C21F30] text-white text-label-sm font-semibold shadow-md">
+                  <span>🚌</span> Servis Filosu
+                </span>
+              </div>
+              <div class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="w-9 h-9 rounded-full bg-white/25 backdrop-blur-md text-white flex items-center justify-center hover:bg-white hover:text-[#C21F30] transition-colors">
+                  <span class="material-symbols-outlined text-[20px]">zoom_in</span>
+                </span>
+              </div>
+              <div class="absolute bottom-4 left-5 right-5 z-10 text-white">
+                <p class="font-title-md font-bold text-white group-hover:text-[#FDE8EA] transition-colors leading-tight">Mevzuata Tam Uyumlu 'Okul Taşıtı' Standartları</p>
+                <p class="font-body-sm text-white/80 text-xs mt-1">Trafik kuralları ve bakanlık yönergelerine eksiksiz uyum</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Metrics & Trust Counters Strip -->
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 mt-12">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            
+            <div class="p-6 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-sm flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#C21F30]/10 text-[#C21F30] flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl">route</span>
+              </div>
+              <div>
+                <p class="font-headline-sm font-extrabold text-[#C21F30]">150.000+</p>
+                <p class="font-body-sm text-on-surface-variant text-xs font-medium">Yıllık Güvenli Kilometre</p>
+              </div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-sm flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#C21F30]/10 text-[#C21F30] flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl">groups</span>
+              </div>
+              <div>
+                <p class="font-headline-sm font-extrabold text-[#C21F30]">850+</p>
+                <p class="font-body-sm text-on-surface-variant text-xs font-medium">Günlük Taşınan Yolcu</p>
+              </div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-sm flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#131b2e] text-white flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl">build</span>
+              </div>
+              <div>
+                <p class="font-headline-sm font-extrabold text-[#131b2e]">1.200+</p>
+                <p class="font-body-sm text-on-surface-variant text-xs font-medium">Yıllık Araç Bakım &amp; Onarım</p>
+              </div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-surface-container-lowest border border-surface-container-high shadow-sm flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-[#25D366]/15 text-[#25D366] flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-2xl">verified</span>
+              </div>
+              <div>
+                <p class="font-headline-sm font-extrabold text-on-surface">%100</p>
+                <p class="font-body-sm text-on-surface-variant text-xs font-medium">Müşteri Memnuniyeti</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ==========================================
+             DIRECT CONTACT & QUICK INQUIRY FORM
+             ========================================== -->
+      <section class="w-full py-16 lg:py-24 bg-surface" id="iletisim">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            
+            <!-- Left: Direct Immediate Contact Info -->
+            <div class="lg:col-span-5 space-y-5">
+              <div>
+                <span class="font-label-md text-label-md text-[#C21F30] font-bold uppercase tracking-wider">BİZE ULAŞIN</span>
+                <h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface font-bold tracking-tight mt-1">
+                  Hemen İletişime Geçin
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                  Eskişehir servis hatları, personel güzergah planlaması veya araç arıza bakım randevusu için bize doğrudan ulaşabilirsiniz.
+                </p>
+              </div>
+
+              <!-- Clickable Call Card -->
+              <a class="flex items-center gap-4 p-5 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md border border-transparent hover:border-[#C21F30]/30 transition-all group" href="tel:05418624880">
+                <div class="w-14 h-14 rounded-2xl bg-[#C21F30] flex items-center justify-center text-white shrink-0 group-hover:scale-105 transition-transform shadow-md shadow-[#C21F30]/20">
+                  <span class="material-symbols-outlined text-3xl">call</span>
+                </div>
+                <div>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold">Telefon Numaramız</p>
+                  <p class="font-headline-sm text-headline-sm font-extrabold text-on-surface mt-0.5 group-hover:text-[#C21F30] transition-colors">0541 862 48 80</p>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Hemen arayın, anında bilgi alın</p>
+                </div>
+              </a>
+
+              <!-- WhatsApp Direct Card -->
+              <a class="flex items-center gap-4 p-5 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md border border-transparent hover:border-[#25D366]/30 transition-all group" href="https://wa.me/905418624880" rel="noopener noreferrer" target="_blank">
+                <div class="w-14 h-14 rounded-2xl bg-[#25D366] flex items-center justify-center text-white shrink-0 group-hover:scale-105 transition-transform shadow-md shadow-[#25D366]/20">
+                  <span class="material-symbols-outlined text-3xl">chat</span>
+                </div>
+                <div>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold">WhatsApp Canlı Destek</p>
+                  <p class="font-title-md text-title-md font-bold text-on-surface mt-0.5 group-hover:text-[#25D366] transition-colors">0541 862 48 80</p>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Hızlıca mesaj yazın, dakikalar içinde yanıtlayalım</p>
+                </div>
+              </a>
+
+              <!-- Email Card -->
+              <a class="flex items-center gap-4 p-5 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md border border-transparent hover:border-[#C21F30]/30 transition-all group" href="mailto:daghan@daghanturizm.com">
+                <div class="w-14 h-14 rounded-2xl bg-[#C21F30] flex items-center justify-center text-white shrink-0 group-hover:scale-105 transition-transform shadow-md shadow-[#C21F30]/20">
+                  <span class="material-symbols-outlined text-3xl">mail</span>
+                </div>
+                <div>
+                  <p class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold">E-Posta Adresimiz</p>
+                  <p class="font-title-md text-title-md font-bold text-on-surface mt-0.5 group-hover:text-[#C21F30] transition-colors break-all">daghan@daghanturizm.com</p>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Resmi teklif ve kurumsal yazışmalar için</p>
+                </div>
+              </a>
+
+              <!-- Office Info & Working Hours -->
+              <div class="p-6 rounded-2xl bg-surface-container-low/80 border border-surface-container-high/80 space-y-4">
+                <div class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-[#C21F30] text-2xl shrink-0 mt-0.5">location_on</span>
+                  <div>
+                    <p class="font-label-md text-label-md font-bold text-on-surface">Merkez Adres &amp; Servis Atölyesi</p>
+                    <p class="font-body-sm text-body-sm text-on-surface font-semibold mt-1">
+                      Sultandere Torancılar Sitesi Uşak Sokak- K Blok No 13 Eskişehir
+                    </p>
+                    <a href="https://maps.google.com/?q=Sultandere+Toranc%C4%B1lar+Sitesi+U%C5%9Fak+Sokak+K+Blok+No+13+Eski%C5%9Fehir" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 mt-2 font-label-sm text-label-sm font-semibold text-[#C21F30] hover:underline">
+                      <span>Haritada Görüntüle</span>
+                      <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3 pt-3 border-t border-outline-variant/30">
+                  <span class="material-symbols-outlined text-[#C21F30] text-2xl shrink-0 mt-0.5">schedule</span>
+                  <div>
+                    <p class="font-label-md text-label-md font-bold text-on-surface">Çalışma Saatleri</p>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                      <strong>Servis Taşımacılığı:</strong> 7/24 Kesintisiz Operasyon<br/>
+                      <strong>Atölye &amp; Bakım:</strong> Pazartesi - Cumartesi 08:30 - 19:00
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right: Interactive Quote Request Form (WhatsApp Integration) -->
+            <div class="lg:col-span-7" id="teklif-formu">
+              <div class="p-8 lg:p-10 rounded-3xl bg-surface-container-lowest shadow-xl border border-surface-container-high/80 relative overflow-hidden">
+                <div class="absolute top-0 left-0 right-0 h-1.5 bg-[#C21F30]"></div>
+
+                <div class="mb-8">
+                  <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C21F30]/10 text-[#C21F30] font-label-sm text-label-sm font-bold mb-3">
+                    <span class="material-symbols-outlined text-[16px]">chat</span>
+                    <span>Anında WhatsApp Yönlendirmeli</span>
+                  </div>
+                  <h3 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+                    Hızlı Teklif ve Bilgi Talebi
+                  </h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                    Formu doldurup gönderdiğinizde, seçtiğiniz hizmete özel hazır mesajla WhatsApp sohbetine yönlendirileceksiniz. Tek tıkla yetkili temsilcimizden bilgi alabilirsiniz!
+                  </p>
+                </div>
+
+                <form class="space-y-5" id="quoteForm">
+                  <!-- Name & Phone -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label class="block font-label-md text-label-md font-semibold text-on-surface mb-2" for="fullName">
+                        Adınız Soyadınız *
+                      </label>
+                      <div class="relative">
+                        <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">person</span>
+                        <input class="w-full pl-11 pr-4 py-3.5 rounded-xl bg-surface text-on-surface placeholder:text-outline text-body-sm border border-transparent focus-ring-brand transition-all" id="fullName" placeholder="Örn: Ahmet Yılmaz" required="" type="text"/>
+                      </div>
+                    </div>
+                    <div>
+                      <label class="block font-label-md text-label-md font-semibold text-on-surface mb-2" for="phone">
+                        Telefon Numaranız *
+                      </label>
+                      <div class="relative">
+                        <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">call</span>
+                        <input class="w-full pl-11 pr-4 py-3.5 rounded-xl bg-surface text-on-surface placeholder:text-outline text-body-sm border border-transparent focus-ring-brand transition-all" id="phone" placeholder="05XX XXX XX XX" required="" type="tel"/>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Service Selector -->
+                  <div>
+                    <label class="block font-label-md text-label-md font-semibold text-on-surface mb-2" for="serviceType">
+                      İlgilendiğiniz Hizmet *
+                    </label>
+                    <div class="relative">
+                      <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-[#C21F30] text-[20px]">directions_bus</span>
+                      <select class="w-full pl-11 pr-10 py-3.5 rounded-xl bg-surface text-on-surface text-body-sm border border-transparent focus-ring-brand transition-all appearance-none cursor-pointer" id="serviceType" required="">
+                        <option value="">Lütfen Hizmet Seçiniz</option>
+                        <option value="okul">Okul Servis Taşımacılığı</option>
+                        <option value="personel">Personel Servis Taşımacılığı</option>
+                        <option value="tir">Tır &amp; Ağır Vasıta Bakım / Tamir</option>
+                        <option value="minibus">Minibüs / Servis Aracı Bakımı</option>
+                        <option value="binek">Binek Araç Tamiri &amp; Periyodik Bakım</option>
+                        <option value="vip">VIP Transfer &amp; Özel Gezi Taşımacılığı</option>
+                        <option value="diger">Diğer / Genel Bilgi Talebi</option>
+                      </select>
+                      <span class="material-symbols-outlined absolute right-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+                    </div>
+                  </div>
+
+                  <!-- Message / Notes -->
+                  <div>
+                    <label class="block font-label-md text-label-md font-semibold text-on-surface mb-2" for="notes">
+                      Güzergah veya Araç Bilgisi / Notunuz (İsteğe Bağlı)
+                    </label>
+                    <textarea class="w-full p-4 rounded-xl bg-surface text-on-surface placeholder:text-outline text-body-sm border border-transparent focus-ring-brand transition-all resize-none" id="notes" placeholder="Örn: Kişi sayısı, sabah kalkış saati, güzergah noktaları veya aracınızdaki arıza detaylarını yazabilirsiniz..." rows="3"></textarea>
+                  </div>
+
+                  <!-- Dynamic Quick Information Hint -->
+                  <div class="p-3.5 rounded-xl bg-[#C21F30]/5 border border-[#C21F30]/15 flex items-center gap-2.5 text-body-sm text-on-surface">
+                    <span class="material-symbols-outlined text-[#C21F30] text-[20px] shrink-0">info</span>
+                    <span>Gönder butonuna bastığınızda seçili hizmet ve notlarınız WhatsApp mesajı olarak hazırlanır; tek yapmanız gereken <strong>"Gönder"</strong>e basmaktır.</span>
+                  </div>
+
+                  <!-- Submit Button in Brand Red -->
+                  <button class="w-full inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-[#C21F30] text-white font-label-lg text-label-lg font-bold shadow-lg shadow-[#C21F30]/30 hover:bg-[#A31625] hover:shadow-xl active:scale-[0.99] transition-all duration-200" type="submit">
+                    <span class="material-symbols-outlined text-[22px]">send</span>
+                    <span>WhatsApp ile Hızlı Teklif &amp; Bilgi Al</span>
+                  </button>
+
+                  <p class="text-center font-label-sm text-label-sm text-on-surface-variant">
+                    🔒 Bilgileriniz gizli tutulur. Doğrudan WhatsApp hattımıza iletilir.
+                  </p>
+
+                  <!-- Success Alert & Direct WhatsApp Link Fallback -->
+                  <div class="hidden p-5 rounded-2xl bg-[#C21F30]/10 border border-[#C21F30]/25 text-on-surface flex items-start gap-3.5 transition-all" id="formSuccess">
+                    <span class="material-symbols-outlined text-[#C21F30] text-3xl shrink-0 mt-0.5">check_circle</span>
+                    <div class="space-y-1">
+                      <p class="font-body-md font-bold text-on-surface">Talebiniz Hazırlandı &amp; Yönlendiriliyor!</p>
+                      <p class="font-body-sm text-on-surface-variant" id="formSuccessDetails">
+                        WhatsApp sohbeti açılıyor. Açılan ekranda doğrudan gönder tuşuna basarak anında görüşebilirsiniz.
+                      </p>
+                      <div class="pt-2" id="whatsappDirectLinkContainer"></div>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==========================================
+         LIGHTBOX MODAL (Görsel Büyüteç)
+         ========================================== -->
+  <div class="fixed inset-0 z-[9999] bg-black/90 backdrop-blur-md hidden flex flex-col items-center justify-center p-4 sm:p-8 transition-opacity duration-300" id="lightboxModal">
+    <!-- Close button -->
+    <button aria-label="Kapat" class="absolute top-5 right-5 w-12 h-12 rounded-full bg-white/10 hover:bg-[#C21F30] text-white flex items-center justify-center transition-colors z-20" id="lightboxClose">
+      <span class="material-symbols-outlined text-3xl">close</span>
+    </button>
+    
+    <!-- Prev / Next controls -->
+    <button aria-label="Önceki" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-[#C21F30] text-white flex items-center justify-center transition-colors z-20" id="lightboxPrev">
+      <span class="material-symbols-outlined text-3xl">chevron_left</span>
+    </button>
+    <button aria-label="Sonraki" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-[#C21F30] text-white flex items-center justify-center transition-colors z-20" id="lightboxNext">
+      <span class="material-symbols-outlined text-3xl">chevron_right</span>
+    </button>
+
+    <!-- Main Image -->
+    <div class="relative max-w-5xl max-h-[80vh] flex items-center justify-center">
+      <img alt="Büyütülmüş Görsel" class="max-w-full max-h-[78vh] object-contain rounded-2xl shadow-2xl border border-white/10" id="lightboxImg" src=""/>
+    </div>
+
+    <!-- Caption & Info Bar -->
+    <div class="mt-4 text-center max-w-2xl px-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-white font-label-sm text-xs mb-2" id="lightboxCategory">
+        <span>Kategori</span>
+      </div>
+      <h3 class="text-white font-title-md font-bold text-lg sm:text-xl" id="lightboxTitle">Başlık</h3>
+      <p class="text-white/70 font-body-sm text-sm mt-1" id="lightboxDesc">Açıklama</p>
+      <p class="text-white/40 text-xs mt-2" id="lightboxCounter">1 / 11</p>
+    </div>
+  </div>
+
+  <!-- ==========================================
+         FOOTER
+         ========================================== -->
+  <footer class="w-full bg-[#131b2e] text-white border-t-2 border-[#C21F30]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
+        
+        <!-- Left Branding -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <a class="inline-flex items-center group py-1" href="#">
+              <img alt="Dağhan Tur Logo" class="h-9 w-auto object-contain transition-transform group-hover:scale-105 duration-200" src="logo-white.svg"/>
+              <span class="sr-only">Dağhan Tur</span>
+            </a>
+          </div>
+          <p class="font-body-md text-body-md text-white/70 max-w-md">
+            Eskişehir ve çevresinde okul &amp; personel servis taşımacılığında güven, tır ve otomobil bakımında 20+ yıllık teknik uzmanlık.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white font-label-sm text-label-sm border border-white/15">
+              <span class="material-symbols-outlined text-[16px] text-[#C21F30]">verified_user</span>
+              ISO 9001 &amp; Güvenli Taşıma Sertifikalı
+            </span>
+          </div>
+        </div>
+
+        <!-- Middle Links -->
+        <div class="lg:col-span-3 space-y-4">
+          <h3 class="font-title-md text-title-md text-white font-bold tracking-tight">Hizmetlerimiz</h3>
+          <ul class="space-y-2.5 font-body-sm text-body-sm text-white/70">
+            <li>
+              <a class="hover:text-white transition-colors flex items-center gap-1.5 group" href="#hizmetlerimiz">
+                <span class="material-symbols-outlined text-[16px] text-[#C21F30] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                <span>Öğrenci Servisi</span>
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-white transition-colors flex items-center gap-1.5 group" href="#hizmetlerimiz">
+                <span class="material-symbols-outlined text-[16px] text-[#C21F30] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                <span>Personel Taşımacılığı</span>
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-white transition-colors flex items-center gap-1.5 group" href="#hizmetlerimiz">
+                <span class="material-symbols-outlined text-[16px] text-[#C21F30] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                <span>Tır &amp; Ağır Vasıta Bakımı</span>
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-white transition-colors flex items-center gap-1.5 group" href="#hizmetlerimiz">
+                <span class="material-symbols-outlined text-[16px] text-[#C21F30] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                <span>Otomobil &amp; Minibüs Servisi</span>
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-white transition-colors flex items-center gap-1.5 group" href="#hizmetlerimiz">
+                <span class="material-symbols-outlined text-[16px] text-[#C21F30] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                <span>VIP Transfer &amp; Gezi</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Contact Details (Verified & Accurate) -->
+        <div class="lg:col-span-4 space-y-4">
+          <h3 class="font-title-md text-title-md text-white font-bold tracking-tight">İletişim Bilgilerimiz</h3>
+          <div class="space-y-3 font-body-sm text-body-sm text-white/70">
+            
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-[20px] text-[#C21F30] shrink-0 mt-0.5">location_on</span>
+              <a class="hover:text-white transition-colors text-white/90" href="https://maps.google.com/?q=Sultandere+Toranc%C4%B1lar+Sitesi+U%C5%9Fak+Sokak+K+Blok+No+13+Eski%C5%9Fehir" rel="noopener noreferrer" target="_blank">
+                Sultandere Torancılar Sitesi Uşak Sokak- K Blok No 13 Eskişehir
+              </a>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px] text-[#C21F30] shrink-0">call</span>
+              <a class="hover:text-white transition-colors font-semibold text-white" href="tel:05418624880">
+                0541 862 48 80
+              </a>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px] text-[#C21F30] shrink-0">mail</span>
+              <a class="hover:text-white transition-colors font-semibold text-white" href="mailto:daghan@daghanturizm.com">
+                daghan@daghanturizm.com
+              </a>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px] text-[#25D366] shrink-0">chat</span>
+              <a class="hover:text-white transition-colors font-semibold text-white" href="https://wa.me/905418624880" rel="noopener noreferrer" target="_blank">
+                WhatsApp: 0541 862 48 80
+              </a>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[20px] text-[#C21F30] shrink-0">schedule</span>
+              <span>Pzt - Cmt: 08:30 - 19:00 / 7/24 Taşımacılık</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Legal -->
+      <div class="mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-white/60 bg-white/5 px-6 py-4 rounded-xl border border-white/10">
+        <p>© 2026 Dağhan Tur Taşımacılık ve Servis. Tüm hakları saklıdır.</p>
+        <div class="flex items-center gap-6">
+          <a class="hover:text-white transition-colors" href="#">Gizlilik Politikası</a>
+          <a class="hover:text-white transition-colors" href="#">KVKK Aydınlatma Metni</a>
+          <a class="hover:text-white transition-colors" href="#">Çerez Politikası</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       SCRIPTS: HERO SLIDER, MARQUEE & LIGHTBOX & WHATSAPP
+       ========================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      /* -------------------------------------------
+         1. HERO SECTION AUTO-SLIDER
+         ------------------------------------------- */
+      const heroSlides = document.querySelectorAll('#heroSliderContainer .hero-slide');
+      const heroDots = document.querySelectorAll('#heroSliderDots .dot');
+      const heroPrev = document.getElementById('heroPrevBtn');
+      const heroNext = document.getElementById('heroNextBtn');
+      let currentHeroIndex = 0;
+      let heroInterval = null;
+
+      function showHeroSlide(index) {
+        if (!heroSlides.length) return;
+        currentHeroIndex = (index + heroSlides.length) % heroSlides.length;
+
+        heroSlides.forEach((slide, idx) => {
+          if (idx === currentHeroIndex) {
+            slide.classList.add('active');
+          } else {
+            slide.classList.remove('active');
+          }
+        });
+
+        heroDots.forEach((dot, idx) => {
+          if (idx === currentHeroIndex) {
+            dot.classList.add('bg-[#C21F30]', 'w-5');
+            dot.classList.remove('bg-white/60', 'w-2.5');
+          } else {
+            dot.classList.remove('bg-[#C21F30]', 'w-5');
+            dot.classList.add('bg-white/60', 'w-2.5');
+          }
+        });
+      }
+
+      function startHeroAutoplay() {
+        stopHeroAutoplay();
+        heroInterval = setInterval(() => {
+          showHeroSlide(currentHeroIndex + 1);
+        }, 4000);
+      }
+
+      function stopHeroAutoplay() {
+        if (heroInterval) {
+          clearInterval(heroInterval);
+          heroInterval = null;
+        }
+      }
+
+      if (heroSlides.length > 0) {
+        showHeroSlide(0);
+        startHeroAutoplay();
+
+        const heroContainer = document.getElementById('heroSliderContainer');
+        if (heroContainer) {
+          heroContainer.addEventListener('mouseenter', stopHeroAutoplay);
+          heroContainer.addEventListener('mouseleave', startHeroAutoplay);
+        }
+
+        if (heroPrev) {
+          heroPrev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showHeroSlide(currentHeroIndex - 1);
+          });
+        }
+        if (heroNext) {
+          heroNext.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showHeroSlide(currentHeroIndex + 1);
+          });
+        }
+
+        heroDots.forEach(dot => {
+          dot.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const idx = parseInt(dot.getAttribute('data-index'), 10);
+            showHeroSlide(idx);
+          });
+        });
+      }
+
+      /* -------------------------------------------
+         2. SÜREKLİ DÖNEN KAYAR GALERİ (Marquee Controls & Filter)
+         ------------------------------------------- */
+      const marqueeWrapper = document.getElementById('marqueeContainer');
+      const marqueeTrack = document.getElementById('marqueeTrack');
+      const pauseToggle = document.getElementById('marqueePauseToggle');
+      const pauseIcon = document.getElementById('marqueePauseIcon');
+      const stepLeft = document.getElementById('marqueeStepLeft');
+      const stepRight = document.getElementById('marqueeStepRight');
+      const filterBtns = document.querySelectorAll('#galleryFilters .filter-btn');
+      let isMarqueePaused = false;
+
+      if (pauseToggle && pauseIcon && marqueeWrapper) {
+        pauseToggle.addEventListener('click', function () {
+          isMarqueePaused = !isMarqueePaused;
+          if (isMarqueePaused) {
+            marqueeWrapper.classList.add('marquee-is-paused');
+            pauseIcon.textContent = 'play_arrow';
+            pauseToggle.classList.add('bg-[#C21F30]', 'text-white');
+          } else {
+            marqueeWrapper.classList.remove('marquee-is-paused');
+            pauseIcon.textContent = 'pause';
+            pauseToggle.classList.remove('bg-[#C21F30]', 'text-white');
+          }
+        });
+      }
+
+      if (stepLeft && marqueeWrapper) {
+        stepLeft.addEventListener('click', function () {
+          marqueeWrapper.scrollBy({ left: -380, behavior: 'smooth' });
+        });
+      }
+      if (stepRight && marqueeWrapper) {
+        stepRight.addEventListener('click', function () {
+          marqueeWrapper.scrollBy({ left: 380, behavior: 'smooth' });
+        });
+      }
+
+      // Filter functionality
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-[#C21F30]', 'text-white', 'active');
+            b.classList.add('text-on-surface-variant');
+          });
+          btn.classList.add('bg-[#C21F30]', 'text-white', 'active');
+          btn.classList.remove('text-on-surface-variant');
+
+          const category = btn.getAttribute('data-filter');
+          const cards = document.querySelectorAll('#marqueeTrack .marquee-card');
+
+          cards.forEach(card => {
+            const cardCat = card.getAttribute('data-category');
+            if (category === 'all' || cardCat === category) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      /* -------------------------------------------
+         3. LIGHTBOX (Görsel Büyüteç Modalı)
+         ------------------------------------------- */
+      const lightbox = document.getElementById('lightboxModal');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxTitle = document.getElementById('lightboxTitle');
+      const lightboxDesc = document.getElementById('lightboxDesc');
+      const lightboxCategory = document.getElementById('lightboxCategory');
+      const lightboxCounter = document.getElementById('lightboxCounter');
+      const lightboxClose = document.getElementById('lightboxClose');
+      const lightboxPrev = document.getElementById('lightboxPrev');
+      const lightboxNext = document.getElementById('lightboxNext');
+
+      const uniqueCards = Array.from(document.querySelectorAll('#marqueeTrack .marquee-card')).slice(0, 11);
+      let currentLightboxIndex = 0;
+
+      function openLightbox(index) {
+        if (!uniqueCards.length) return;
+        currentLightboxIndex = (index + uniqueCards.length) % uniqueCards.length;
+        const card = uniqueCards[currentLightboxIndex];
+
+        const src = card.getAttribute('data-full');
+        const title = card.getAttribute('data-title');
+        const desc = card.getAttribute('data-desc');
+        const category = card.getAttribute('data-category') === 'servis' ? '🚌 Servis Taşımacılığı' : '⚙️ Bakım Atölyesi';
+
+        lightboxImg.src = src;
+        lightboxTitle.textContent = title;
+        lightboxDesc.textContent = desc;
+        lightboxCategory.innerHTML = `<span>${category}</span>`;
+        lightboxCounter.textContent = `${currentLightboxIndex + 1} / ${uniqueCards.length}`;
+
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      document.querySelectorAll('#marqueeTrack .marquee-card').forEach((card, idx) => {
+        card.addEventListener('click', function () {
+          openLightbox(idx % uniqueCards.length);
+        });
+      });
+
+      if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+      if (lightbox) {
+        lightbox.addEventListener('click', function (e) {
+          if (e.target === lightbox) closeLightbox();
+        });
+      }
+      if (lightboxPrev) {
+        lightboxPrev.addEventListener('click', function (e) {
+          e.stopPropagation();
+          openLightbox(currentLightboxIndex - 1);
+        });
+      }
+      if (lightboxNext) {
+        lightboxNext.addEventListener('click', function (e) {
+          e.stopPropagation();
+          openLightbox(currentLightboxIndex + 1);
+        });
+      }
+
+      document.addEventListener('keydown', function (e) {
+        if (!lightbox.classList.contains('hidden')) {
+          if (e.key === 'Escape') closeLightbox();
+          if (e.key === 'ArrowLeft') openLightbox(currentLightboxIndex - 1);
+          if (e.key === 'ArrowRight') openLightbox(currentLightboxIndex + 1);
+        }
+      });
+
+      /* -------------------------------------------
+         4. WHATSAPP TEKLİF & BİLGİ FORMU
+         ------------------------------------------- */
+      const quoteForm = document.getElementById('quoteForm');
+      if (quoteForm) {
+        quoteForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          const fullName = (document.getElementById('fullName').value || '').trim();
+          const phone = (document.getElementById('phone').value || '').trim();
+          const serviceSelect = document.getElementById('serviceType');
+          const serviceOption = serviceSelect.options[serviceSelect.selectedIndex];
+          const serviceText = serviceOption && serviceOption.value ? serviceOption.text : 'Genel Bilgi';
+          const notes = (document.getElementById('notes').value || '').trim();
+
+          if (!fullName || !phone || !serviceSelect.value) {
+            alert('Lütfen adınızı, telefon numaranızı ve ilgilendiğiniz hizmeti seçiniz.');
+            return;
+          }
+
+          // Format WhatsApp message
+          let waMessage = `*DAĞHAN TUR - HIZLI TEKLİF & BİLGİ TALEBİ*\n\n` +
+            `👤 *Ad Soyad:* ${fullName}\n` +
+            `📞 *Telefon:* ${phone}\n` +
+            `📌 *İlgilenilen Hizmet:* ${serviceText}\n`;
+
+          if (notes) {
+            waMessage += `📝 *Talep / Güzergah Notu:* ${notes}\n`;
+          } else {
+            waMessage += `📝 *Not:* Bu konu hakkında detaylı bilgi ve fiyat teklifi almak istiyorum.\n`;
+          }
+
+          waMessage += `\n_Bu mesaj daghanturizm.com web sitesi üzerinden oluşturulmuştur._`;
+
+          const waTargetNumber = '905418624880';
+          const waUrl = `https://wa.me/${waTargetNumber}?text=${encodeURIComponent(waMessage)}`;
+
+          // UI Success Box
+          const successEl = document.getElementById('formSuccess');
+          const linkContainer = document.getElementById('whatsappDirectLinkContainer');
+          if (successEl) {
+            successEl.classList.remove('hidden');
+            if (linkContainer) {
+              linkContainer.innerHTML = `
+                <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#25D366] text-white font-label-md font-bold hover:bg-[#1EBE5D] shadow-sm transition-all mt-1">
+                  <span class="material-symbols-outlined text-[18px]">chat</span>
+                  <span>WhatsApp Penceresi Açılmazsa Buraya Tıklayın</span>
+                </a>
+              `;
+            }
+          }
+
+          // Redirect
+          try {
+            const opened = window.open(waUrl, '_blank');
+            if (!opened || opened.closed || typeof opened.closed === 'undefined') {
+              window.location.href = waUrl;
+            }
+          } catch (err) {
+            window.location.href = waUrl;
+          }
+        });
+      }
+
+    });
+  </script>
+
+</body>
+</html>
